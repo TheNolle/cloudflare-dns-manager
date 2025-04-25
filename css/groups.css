@@ -1,0 +1,100 @@
+tr.group-header>td {
+	position: relative;
+	cursor: pointer;
+	width: 100%;
+	padding: 0.25rem 0.75rem !important;
+	background-color: var(--surface);
+	transition: 0.2s ease-in-out;
+}
+
+tr.group-header>td:hover {
+	background-color: var(--border);
+}
+
+tr.group-header>td>div.group-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0.5rem;
+}
+
+tr.group-header>td>div.group-content>span.group-color {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 0.25rem;
+	border-radius: thin solid var(--border);
+}
+
+tr.group-header>td>div.group-content>h2 {
+	display: flex;
+	align-items: center;
+	column-gap: 0.5rem;
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: var(--text);
+}
+
+tr.group-header>td>div.group-content>h2>svg {
+	width: 1.25rem;
+	height: 1.25rem;
+	color: var(--secondary);
+}
+
+tr.group-header>td>div.group-content>p {
+	font-size: 0.875rem;
+	font-weight: 400;
+	font-style: italic;
+	color: var(--text-secondary);
+	opacity: 0.75;
+}
+
+tr.group-header>td>div.group-actions {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 0.5rem;
+}
+
+tr.group-header>td>div.group-actions>button.edit {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 0.25rem;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+tr.group-header:hover>td>div.group-actions>button.edit {
+	border-color: var(--text);
+}
+
+tr.group-header>td>div.group-actions>button.edit:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+tr.group-header>td>div.group-actions>button.edit>svg {
+	width: 0.75rem;
+	height: 0.75rem;
+	color: var(--text);
+}
+
+tr.group-collapsed {
+	display: none !important;
+}
+
+tr.group-end {
+	border-bottom: thin solid var(--border);
+}

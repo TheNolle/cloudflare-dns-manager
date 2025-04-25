@@ -1,0 +1,267 @@
+#table-container {
+	height: 100%;
+	overflow-y: auto;
+}
+
+#table-container>table {
+	width: 100%;
+	margin-bottom: auto;
+	padding: 0 0.5rem;
+}
+
+#table-container>table>thead {
+	border-bottom: thin solid var(--border);
+	background-color: var(--surface);
+}
+
+#table-container>table>thead>tr>th {
+	padding: 0.25rem 0.5rem;
+	font-weight: 600;
+	text-align: left;
+}
+
+#table-container>table>thead>tr>th.actions {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#table-container>table>tbody {
+	height: 100%;
+}
+
+#table-container>table>tbody>tr>td {
+	padding: 0.25rem 0.5rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#table-container>table>tbody>tr>td:has(>svg),
+#table-container>table>tbody>tr>td:has(>img) {
+	height: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.5rem;
+}
+
+#table-container>table>tbody>tr>td.actions {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 0.5rem;
+}
+
+#table-container>table>tbody>tr>td.actions>button[disabled]:hover {
+	cursor: not-allowed;
+	border-color: var(--danger);
+	color: var(--danger);
+}
+
+#table-container>table>tbody>tr>td>svg {
+	width: 1rem;
+	height: 1rem;
+	color: var(--primary);
+}
+
+#table-container>table>tbody>tr>td>img {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+#table-container>table>tbody>tr>td>span.priority {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	border-radius: 0.5rem;
+	border: 2px solid var(--secondary);
+	color: var(--text);
+	background-color: var(--primary);
+}
+
+#table-container>table>tbody>tr>td>button {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+#table-container>table>tbody>tr>td>button:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+/* Edit Row */
+#table-container>table>tbody>tr.edit-row>td>div.edit-form {
+	width: 100%;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	padding: 1rem;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 0.25rem;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>label {
+	margin-left: 0.5rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>select,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>textarea {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input:hover,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>select:hover,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>textarea:hover,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input:focus,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>select:focus,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>textarea:focus {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='checkbox'],
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='radio'] {
+	cursor: pointer;
+	position: relative;
+	width: 1.5rem;
+	aspect-ratio: 1/1;
+	appearance: none;
+	border-radius: 0.5rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='checkbox']:hover,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='checkbox']:focus,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='radio']:hover,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='radio']:focus {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='checkbox']:checked,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='radio']:checked {
+	border-color: var(--secondary);
+	background-color: var(--primary);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='checkbox']:after,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='radio']:after {
+	opacity: 0;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='checkbox']:checked:after,
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>input[type='radio']:checked:after {
+	content: '✔';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1rem;
+	text-align: center;
+	color: var(--surface);
+	opacity: 1;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-form>fieldset>div.form-fields>div.form-field>textarea {
+	min-height: 5rem;
+	max-height: 10rem;
+	resize: vertical;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-controls {
+	display: flex;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-controls>button {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-controls>button:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-controls>button.delete-button {
+	margin-right: auto;
+	border-color: var(--danger);
+	color: var(--danger);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-controls>button.delete-button:hover {
+	border-color: var(--border);
+	color: var(--text);
+	background-color: var(--danger);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-controls>button.save-button {
+	border-color: var(--success);
+	color: var(--success);
+}
+
+#table-container>table>tbody>tr.edit-row>td>div.edit-controls>button.save-button:hover {
+	border-color: var(--border);
+	color: var(--text);
+	background-color: var(--success);
+}

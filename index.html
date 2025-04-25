@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+	<title>Cloudflare DNS Manager</title>
+	<link rel='shortcut icon' href='assets/favicon.ico' type='image/x-icon'>
+
+	<link rel='stylesheet' href='css/base.css'>
+	<link rel='stylesheet' href='css/header.css'>
+	<link rel='stylesheet' href='css/form.css'>
+	<link rel='stylesheet' href='css/table.css'>
+	<link rel='stylesheet' href='css/filters.css'>
+	<link rel='stylesheet' href='css/search.css'>
+	<link rel='stylesheet' href='css/pagination.css'>
+	<link rel='stylesheet' href='css/groups.css'>
+	<link rel='stylesheet' href='css/modal.css'>
+
+	<script src='assets/libs/fontawesome.min.js'></script>
+	<script src='assets/libs/solid.min.js'></script>
+	<script src='assets/libs/brands.min.js'></script>
+
+	<script type='module' src='js/main.js' defer></script>
+</head>
+
+<body>
+	<header>
+		<h1>☁️ Cloudflare DNS Manager 🌐</h1>
+		<div class='header-buttons'>
+			<label class='select'>
+				<select id='entries-per-page'>
+					<option value='10'>10</option>
+					<option value='25' selected>25</option>
+					<option value='50'>50</option>
+					<option value='100'>100</option>
+					<option value='all'>All</option>
+				</select>
+				entries
+			</label>
+
+			<button class='button' id='read-only-toggle'>
+				<i class='fa-solid fa-eye'></i>
+				Show Read-Only
+			</button>
+		</div>
+	</header>
+
+	<form id='dns-form'>
+		<select id='record-type'></select>
+		<div id='form-fields'></div>
+	</form>
+
+	<div id='table-container'>
+		<table id='dns-table'></table>
+	</div>
+
+	<footer>
+		<select id='filter-type'>
+			<option value=''>All types</option>
+		</select>
+
+		<div class='search-bar'>
+			<input id='search-bar' type='search' placeholder='Search @name, content, or #comment...' />
+			<i class='fa-solid fa-magnifying-glass'></i>
+		</div>
+
+		<div id='pagination-controls'></div>
+	</footer>
+</body>
+
+</html>

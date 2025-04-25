@@ -1,0 +1,33 @@
+#filter-type {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+#filter-type:hover,
+#filter-type:focus {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+#filter-type>option {
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: var(--surface);
+	transition: 0.2s ease-in-out;
+}
+
+#filter-type>option:hover,
+#filter-type>option:focus {
+	border-color: var(--primary);
+	color: var(--primary);
+}

@@ -1,0 +1,166 @@
+form {
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 1rem;
+	padding: 1rem;
+	border-bottom: thin solid var(--border);
+}
+
+form>select {
+	cursor: pointer;
+	margin: auto 0;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+form>select:hover,
+form>select:focus {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+form>div>fieldset {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+form>div>fieldset>legend {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+form>div>fieldset>p {
+	width: 100%;
+	padding: 1rem;
+	padding-right: 0.5rem;
+	border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
+	border-left: 0.25rem solid var(--secondary);
+	background-color: rgba(255, 255, 255, 0.0625);
+}
+
+form>div>fieldset>div.form-fields {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	padding: 1rem;
+}
+
+form>div>fieldset>div.form-fields>div.form-field {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 0.25rem;
+}
+
+form>div>fieldset>div.form-fields>div.form-field>label {
+	margin-left: 0.5rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+form>div>fieldset>div.form-fields>div.form-field>input,
+form>div>fieldset>div.form-fields>div.form-field>select,
+form>div>fieldset>div.form-fields>div.form-field>textarea {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+form>div>fieldset>div.form-fields>div.form-field>input:hover,
+form>div>fieldset>div.form-fields>div.form-field>input:focus,
+form>div>fieldset>div.form-fields>div.form-field>select:hover,
+form>div>fieldset>div.form-fields>div.form-field>select:focus,
+form>div>fieldset>div.form-fields>div.form-field>textarea:hover,
+form>div>fieldset>div.form-fields>div.form-field>textarea:focus {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+form>div>fieldset>div.form-fields>div.form-field>input[type='checkbox'],
+form>div>fieldset>div.form-fields>div.form-field>input[type='radio'] {
+	cursor: pointer;
+	position: relative;
+	width: 1.5rem;
+	aspect-ratio: 1/1;
+	appearance: none;
+	border-radius: 0.5rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+form>div>fieldset>div.form-fields>div.form-field>input[type='checkbox']:hover,
+form>div>fieldset>div.form-fields>div.form-field>input[type='checkbox']:focus,
+form>div>fieldset>div.form-fields>div.form-field>input[type='radio']:hover,
+form>div>fieldset>div.form-fields>div.form-field>input[type='radio']:focus {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+form>div>fieldset>div.form-fields>div.form-field>input[type='checkbox']:checked,
+form>div>fieldset>div.form-fields>div.form-field>input[type='radio']:checked {
+	border-color: var(--secondary);
+	background-color: var(--primary);
+}
+
+form>div>fieldset>div.form-fields>div.form-field>input[type='checkbox']:after,
+form>div>fieldset>div.form-fields>div.form-field>input[type='radio']:after {
+	opacity: 0;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+form>div>fieldset>div.form-fields>div.form-field>input[type='checkbox']:checked:after,
+form>div>fieldset>div.form-fields>div.form-field>input[type='radio']:checked:after {
+	content: '✔';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1rem;
+	text-align: center;
+	color: var(--surface);
+	opacity: 1;
+}
+
+form>div>fieldset>div.form-fields>div.form-field>textarea {
+	min-height: 5rem;
+	max-height: 10rem;
+	resize: vertical;
+}
+
+form>div>fieldset>button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: flex-end;
+	margin-right: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+form>div>fieldset>button:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}

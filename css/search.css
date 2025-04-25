@@ -1,0 +1,36 @@
+.search-bar {
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 4px;
+	border: thin solid var(--border);
+	overflow: hidden;
+	transition: 0.2s ease-in-out;
+}
+
+.search-bar:has(>#search-bar:hover),
+.search-bar:has(>#search-bar:focus) {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+.search-bar>#search-bar {
+	flex: 1;
+	padding: 0.5rem;
+	padding-right: 2rem;
+	color: var(--text);
+	background-color: transparent;
+}
+
+.search-bar>#search-bar::placeholder {
+	color: var(--text-secondary);
+	opacity: 0.5;
+}
+
+.search-bar>svg {
+	position: absolute;
+	right: 0.5rem;
+}

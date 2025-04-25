@@ -1,0 +1,67 @@
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	border-bottom: thin solid var(--border);
+	background-color: var(--surface);
+}
+
+header>h1 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+header>div.header-buttons {
+	display: flex;
+	gap: 0.5rem;
+}
+
+header>div.header-buttons>button.button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 0.25rem;
+	padding: 0.5rem;
+	font-size: 0.875rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+header>div.header-buttons>button.button:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+header>div.header-buttons>label.select {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 0.25rem;
+	padding: 0.5rem;
+	font-size: 0.875rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+header>div.header-buttons>label.select:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+header>div.header-buttons>label.select>select {
+	cursor: pointer;
+	background-color: transparent;
+}
+
+header>div.header-buttons>label.select:hover>select {
+	color: var(--primary);
+}

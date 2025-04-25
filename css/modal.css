@@ -1,0 +1,140 @@
+body:has(div.modal-overlay.open) {
+	overflow: hidden;
+}
+
+div.modal-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+div.modal-overlay.open {
+	opacity: 1;
+}
+
+div.modal-overlay>div.modal {
+	max-width: 600px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	border: thin solid var(--border);
+	background-color: var(--surface);
+}
+
+div.modal-overlay>div.modal>div.list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+div.modal-overlay>div.modal>div.list>button {
+	cursor: pointer;
+	padding: 0.5rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+div.modal-overlay>div.modal>div.list>button:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+div.modal-overlay>div.modal>div.list>button.current {
+	cursor: not-allowed;
+	border-color: var(--danger);
+	color: var(--danger);
+	opacity: 0.5;
+}
+
+div.modal-overlay>div.modal>div.list>button.current:hover {
+	color: var(--text);
+	background-color: var(--danger);
+}
+
+div.modal-overlay>div.modal>form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+}
+
+div.modal-overlay>div.modal>form input,
+div.modal-overlay>div.modal>form textarea {
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+}
+
+div.modal-overlay>div.modal>form input:hover,
+div.modal-overlay>div.modal>form input:focus,
+div.modal-overlay>div.modal>form textarea:hover,
+div.modal-overlay>div.modal>form textarea:focus {
+	border-color: var(--primary);
+}
+
+div.modal-overlay>div.modal>form>label {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.25rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+div.modal-overlay>div.modal>form>button {
+	cursor: pointer;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+div.modal-overlay>div.modal>form>button:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+div.modal-overlay>div.modal>button {
+	cursor: pointer;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: thin solid var(--border);
+	color: var(--text);
+	background-color: transparent;
+	transition: 0.2s ease-in-out;
+}
+
+div.modal-overlay>div.modal>button:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+div.modal-overlay>div.modal>button.remove {
+	border-color: var(--danger);
+	color: var(--danger);
+}
+
+div.modal-overlay>div.modal>button.remove:hover {
+	color: var(--text);
+	background-color: var(--danger);
+}
